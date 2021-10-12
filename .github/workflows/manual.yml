@@ -8,6 +8,8 @@ on:
   workflow_dispatch:
   push:
 
+env:
+  aaa: aho
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,7 +21,7 @@ jobs:
 
     steps:
       - name: Run a one-line script
-        run: echo $GITHUB_SHA
+        run: echo ${{ env.aaa }}
 
       - uses: chrnorm/deployment-action@releases/v1
         name: Create GitHub deployment
