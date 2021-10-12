@@ -20,6 +20,6 @@ jobs:
       - uses: chrnorm/deployment-action@releases/v1
         name: Create GitHub deployment
         with:
-          token: ${{ secrets.DEPLOY_TOKEN }}
+          token: ${{ github.token }}
           target_url: http://my-app-url.com
           environment: production
